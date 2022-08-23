@@ -12,10 +12,10 @@
   "action": {
     "default_popup" : "popup.html"
   },
-  "permissions": ["activeTab", "tabs"],
+  "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["https://www.ptt.cc/bbs/*"],
+      "matches": ["https://www.ptt.cc/bbs/*/*"],
       "js": ["content-script.js"]
     }
   ]

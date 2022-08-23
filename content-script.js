@@ -1,4 +1,3 @@
-//this is content script
 /*
  * popup.html send regex string to function start
 */
@@ -13,7 +12,6 @@ async function search(msg) {
   let page_cnt = msg.page_cnt;
   let patterns = [];
   if (!pattern_str) {
-    //pattern_str = '|'.join(kwArr);//search for "foo bar", find entries with "foo" or "bar"
     Array.prototype.push.apply(patterns, kwArr.map(kw => new RegExp(kw)));
   } else {
     patterns.push(new RegExp(pattern_str))
@@ -48,8 +46,8 @@ async function search(msg) {
   });
   await Promise.all(promises);
   ents.sort(function(a, b) {
-    let a_date = a.getElementsByClassName('date')[0].textContent;
-    let b_date = b.getElementsByClassName('date')[0].textContent;
+    let a_date = a.querySelector('a').href;//a.getElementsByClassName('date')[0].textContent;
+    let b_date = b.querySelector('a').href;// b.getElementsByClassName('date')[0].textContent;
     //in decreasing order
     if (a_date < b_date) return 1;
     if (a_date > b_date) return -1;
