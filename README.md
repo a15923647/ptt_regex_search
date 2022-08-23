@@ -19,3 +19,6 @@ git clone https://github.com/a15923647/ptt_regex_search.git
 
 只填關鍵字
 ![img](https://github.com/a15923647/ptt_regex_search/blob/master/demo/keywords_only.jpg?raw=true)
+
+三攔都填
+![img](https://github.com/a15923647/ptt_regex_search/blob/master/demo/all.jpg?raw=true)
